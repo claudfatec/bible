@@ -1,29 +1,29 @@
-    <?php
-    if ($_GET["bookid"]==NULL) {?><!--Valida se escolheu livro, caso negativo gera o select-->
+<?php
+if ($_GET["bookid"]==NULL) {?><!--Valida se escolheu livro, caso negativo gera o select-->
+    <form action= "index.php?bookid=<?=$_GET['bookid']?>" method="get">
+        <select name="bookid">
 
-        <form action= "index.php?bookid=<?=$_GET['bookid']?>" method="get">
-            <select name="bookid">
-                <optgroup label = "Antigo Testamento"><!--Destaca as opções de livros do AT-->
-                    <option value="">--Livro--</option>
+            <optgroup label = "Antigo Testamento"><!--Destaca as opções de livros do AT-->
+                <option value="">--Livro--</option>
 
-                    <?php $sql = "select id, name from books where testament=1";
-                    $results = mysqli_query($conn, $sql);
-                    if ($results === false) {
-                        echo mysqli_error($conn);
-                    } else {
-                        $bibles = mysqli_fetch_all($results, MYSQLI_ASSOC);
-                    } 
-                    if (empty($bibles)){?>
-                        <option value = 1>Texto não encontrado.</option><?php
+                <?php $sql = "select id, name from books where testament=1";
+                $results = mysqli_query($conn, $sql);
+                if ($results === false) {
+                    echo mysqli_error($conn);
+                } else {
+                    $bibles = mysqli_fetch_all($results, MYSQLI_ASSOC);
+                } 
+                if (empty($bibles)){?>
+                    <option value = 1>Texto não encontrado.</option><?php
+                }
+                else {
+                    foreach ($bibles as $bible){ ?>
+                        <option value="<?=$bible['id']?>"> <?=$bible['name']?></option><?php
                     }
-                    else {
-                        foreach ($bibles as $bible){ ?>
-                            <option value="<?=$bible['id']?>"> <?=$bible['name']?></option><?php
-                        }
-                    }?>
-                </optgroup>
-                <optgroup label = "Novo Testamento"><!--Destaca as opções de livros do NT-->
+                }?>
+            </optgroup>
 
+            <optgroup label = "Novo Testamento"><!--Destaca as opções de livros do NT-->
                 <?php $sql = "select id, name from books where testament=2";
                 $results = mysqli_query($conn, $sql);
                 if ($results === false) {
@@ -40,12 +40,13 @@
                         <?php }
                 }?>
                 </optgroup>           
-            </select>
-            <input type="submit" value="Captl.">
-        </form>
-    <?php
 
-//Recebe o capítulo desejado
+        </select>
+        <input type="submit" value="Captl.">
+    </form>
+    <?php 
+    
+    //Recebe o capítulo desejado
 
 } else {
     $livro = $_GET['bookid'];
