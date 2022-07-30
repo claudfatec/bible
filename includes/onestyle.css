@@ -1,6 +1,11 @@
 html {
-    font-size: 20px;
     overflow-y: scroll;
+}
+body {
+  margin-top:0px;
+  margin-right: 0px;
+  margin-left:0px;
+  margin-bottom: 0px;
 }
 p{ text-align:center;}
 
@@ -16,10 +21,6 @@ border:2px solid #900; cursor:pointer; }
 
 .mensagem{ color: #333; font-size: 15px; font-weight:
 bold; margin: 10px;}
-
-#conteudo{ width: 100%; height: 100%;
-}
-
 input {
     width: 20px;
     color: rgb(22, 2, 44);
@@ -84,23 +85,23 @@ float: left;
 .direita{
 float: right;
 }
-.centro{
+.titulo{
   position:relative;
-  top:50%;
-  left:10%;
-  right:auto;
+  top:0px;
+  left:auto;
   transform:translate(-50%,-50%);
+  font-size: 32px;
+  text-shadow: 1px 3px 3px #ababab;
 }
 .content {
-    text-align: center;
     background-color: #064b77;
     color:white;
-    font-size:medium;
 }
 .texto{
   background-color: #fafcf8;
-  border-radius: 10px; box-shadow: 5px 5px 5px #032031;
+  border-radius: 10px; box-shadow: 3px 0px 3px #E6E6FA;
   font-family: open_sansregular;
+  font-size:24px;
   color:#032031; 
 }
 .texto:hover{
@@ -117,10 +118,10 @@ float: right;
 background-color: #064b77;
 }
 #conteudo{
-background-color: rgb(252, 244, 238);
-}
-#bottom{
-background-color: #064b77;
+background-color: #fafcf8;
+margin-left:8px;
+margin-top:8px;
+margin-right:8px;
 }
 #captl {
     background-color: indianred;

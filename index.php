@@ -1,9 +1,10 @@
 <?php require_once("includes/header.php");
 require_once("includes/conn.php");
 $conn = getDB()?>
+<!-- Título -->
 <div id="top">
-  <span class="content centro">
-    PLANO DE LEITURA ANUAL
+  <span class="content titulo">
+    <center>PLANO DE LEITURA ANUAL</center>
 	</span>
   <span><?php require_once("includes/openbible.php");?></span>
 	<span class="content direita">
@@ -19,4 +20,5 @@ $conn = getDB()?>
     <input type="submit" value="Vamos la!">
     </form>
 		</span>
+
     <?php require_once("includes/foot.php");
