@@ -16,12 +16,13 @@ $conn = getDB(); ?>
 
 <!-- Livro e capítulo - Título -->
 <div id="top"> 
-    <span class = 'content titulo'>
-    <center><?= $nombre?> <?=$captl;?></center></span>
+    <span class = 'titulo'>
+        <em><?= $nombre?> <?=$captl;?></em>
+    </span>
 
-    <span class='content esquerda'>previous<a href='index.php'>Home</a></span> 
-    <span class='content direita'>next</span>
-    <span class='content esquerda'><?php require 'includes/openbible.php' ?></span>
+    <span class=' esquerda'><?php require 'includes/openbible.php' ?></span>
+    <span class='direita'>    <a href='index.php'><img src='includes/home.png'> </a>
+</span>
     
 </div>
 <div id = "conteudo">
@@ -43,6 +44,36 @@ $conn = getDB(); ?>
                 </div><?php
             endforeach;
     endif; ?>
+   <?php  $proxverscl = $bible['id']+1;
+    $antverscl = $bible['id']-$bible['verse'];
+    include 'includes/capituloprox.php';
+ ?>   
+    <span class='prevnextdir'>
+        <form action="capitulo.php?bookid=$bookid&captl=$captl&nombre=$nombre" method="get">
+            <input type= "hidden" name="bookid" value="<?= $bookid;?>">
+            <input type= "hidden" name="captl" value="<?= $captl;?>">
+            <input type= "hidden" name="nombre" value="<?= $nombre;?>">
+            <button type="submit">
+                <img src="includes/next.png"></button>
+
+        </form>
+    </span>
+
+
+    <?php
+
+$proxverscl = $antverscl;
+include 'includes/capituloprox.php';  ?>
+
+<span class='prevnextesq'>
+    <form action="capitulo.php?bookid=$bookid&captl=$captl&nombre=$nombre" method="get">
+        <input type= "hidden" name="bookid" value="<?= $bookid;?>">
+        <input type= "hidden" name="captl" value="<?= $captl;?>">
+        <input type= "hidden" name="nombre" value="<?= $nombre;?>">
+        <button type="submit">
+                <img src="includes/previous.png"></button>
+    </form>
+</span>
 
 </div>
 
@@ -53,35 +84,7 @@ $conn = getDB(); ?>
 
 <div id="bottom">
 
-   <?php  $proxverscl = $bible['id']+1;
-    $antverscl = $bible['id']-$bible['verse'];
-    include 'includes/capituloprox.php';
- ?>   
-    <span class='content direita'>
-        <form action="capitulo.php?bookid=$bookid&captl=$captl&nombre=$nombre" method="get">
-            <input type= "hidden" name="bookid" value="<?= $bookid;?>">
-            <input type= "hidden" name="captl" value="<?= $captl;?>">
-            <input type= "hidden" name="nombre" value="<?= $nombre;?>">
-            <input type="submit" value="Próximo" >
-        </form>
-    </span>
 
-    <?php
-
-    $proxverscl = $antverscl;
-    include 'includes/capituloprox.php';  ?>
-
-    <span class='content esquerda'>
-        <form action="capitulo.php?bookid=$bookid&captl=$captl&nombre=$nombre" method="get">
-            <input type= "hidden" name="bookid" value="<?= $bookid;?>">
-            <input type= "hidden" name="captl" value="<?= $captl;?>">
-            <input type= "hidden" name="nombre" value="<?= $nombre;?>">
-            <input type="submit" value="Anterior" >
-        </form>
-    </span>
-
-
-
-    <span class='content'><a href='index.php'>Home </a><?=$antverscl ?></span> 
+    <span><a href='index.php'>Home </a></span> 
 </div>
 <?php require_once("includes/foot.php");

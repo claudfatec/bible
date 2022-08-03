@@ -21,8 +21,8 @@ border:2px solid #900; cursor:pointer; }
 
 .mensagem{ color: #333; font-size: 15px; font-weight:
 bold; margin: 10px;}
+
 input {
-    width: 20px;
     color: rgb(22, 2, 44);
     
   }
@@ -53,12 +53,22 @@ a {
   }
   
   a:link {
-    color: white;
+    color: whitesmoke;
+    background: #064b77
   }
   
   a:visited {
-    color: #f1e789;
+    color: inherit;
   }
+  img {
+    height:30px;
+  }
+
+  button {
+    border-style: none;
+    background-color:transparent;
+  }
+  
   
   a:focus {
     border-bottom: 1px solid;
@@ -75,26 +85,38 @@ a {
     background: red;
     color: #CDFEAA;
   }
-.prevnext{
-    text-align: center;
-    background-color: indianred; 
+.prevnextesq{
+  float: right;
+  position: fixed;
+  top:50%;
+  margin-left:-27px
 }
 .esquerda{
 float: left;
+position: inherit;
+}
+.prevnextdir {
+float: right;
+position: fixed;
+top:50%;
+right:0%;
 }
 .direita{
 float: right;
+position: inherit;
 }
 .titulo{
-  position:relative;
-  top:0px;
-  left:auto;
+  text-align:center;
+  position:fixed;
+  width:100%;
+  top:14px;
+  left:50%;
   transform:translate(-50%,-50%);
-  font-size: 32px;
+  font-size: xx-large;
   text-shadow: 1px 3px 3px #ababab;
+  background-color:#064b77
 }
 .content {
-    background-color: #064b77;
     color:white;
 }
 .texto{
@@ -115,13 +137,16 @@ float: right;
     height: 60px;
 }
 #top {
-background-color: #064b77;
+  height: 8px;
+  position: relative;
+  background-color: #064b77;
+  color:white;
 }
 #conteudo{
-background-color: #fafcf8;
-margin-left:8px;
+background-color: whitesmoke;
+margin-left:21px;
 margin-top:8px;
-margin-right:8px;
+margin-right:17px;
 }
 #captl {
     background-color: indianred;
@@ -143,6 +168,3 @@ margin-right:8px;
     height: 100%;
     background-color: rgb(252, 244, 238);
 }
-
-
-  
