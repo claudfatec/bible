@@ -46,7 +46,7 @@ h6 {
     font-family: open_sansregular;
     font-size: 20px;
 }
-a {
+/*a {
     outline: none;
     text-decoration: none;
     padding: 2px 1px 0;
@@ -59,9 +59,13 @@ a {
   
   a:visited {
     color: inherit;
-  }
+  }*/
   img {
     height:30px;
+    background-color:transparent;
+  }
+  img:hover {
+    height:60px;
   }
 
   button {

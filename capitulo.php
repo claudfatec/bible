@@ -21,7 +21,7 @@ $conn = getDB(); ?>
     </span>
 
     <span class=' esquerda'><?php require 'includes/openbible.php' ?></span>
-    <span class='direita'>    <a href='index.php'><img src='includes/home.png'> </a>
+    <span class='direita'>    <a href='index.php' alt='Home'><img src='includes/home.png' > </a>
 </span>
     
 </div>
@@ -85,6 +85,7 @@ include 'includes/capituloprox.php';  ?>
 <div id="bottom">
 
 
-    <span><a href='index.php'>Home </a></span> 
+    <span><center><a href='index.php' alt='Home'><img src='includes/homebotton.png' > </a></center>
+</span>
 </div>
 <?php require_once("includes/foot.php");
