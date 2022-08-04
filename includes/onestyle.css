@@ -46,6 +46,11 @@ h6 {
     font-family: open_sansregular;
     font-size: 20px;
 }
+a:-webkit-any-link {
+  color: transparent;
+  cursor: pointer;
+}
+
 /*a {
     outline: none;
     text-decoration: none;

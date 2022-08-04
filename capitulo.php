@@ -21,7 +21,7 @@ $conn = getDB(); ?>
     </span>
 
     <span class=' esquerda'><?php require 'includes/openbible.php' ?></span>
-    <span class='direita'>    <a href='index.php' alt='Home'><img src='includes/home.png' > </a>
+    <span class='direita'>    <a href='index.php' alt='Home'><img src='images/homebotton.png' > </a>
 </span>
     
 </div>
@@ -54,7 +54,7 @@ $conn = getDB(); ?>
             <input type= "hidden" name="captl" value="<?= $captl;?>">
             <input type= "hidden" name="nombre" value="<?= $nombre;?>">
             <button type="submit">
-                <img src="includes/next.png"></button>
+                <img src="images/next.png"></button>
 
         </form>
     </span>
@@ -71,7 +71,7 @@ include 'includes/capituloprox.php';  ?>
         <input type= "hidden" name="captl" value="<?= $captl;?>">
         <input type= "hidden" name="nombre" value="<?= $nombre;?>">
         <button type="submit">
-                <img src="includes/previous.png"></button>
+                <img src="images/previous.png"></button>
     </form>
 </span>
 
@@ -85,7 +85,7 @@ include 'includes/capituloprox.php';  ?>
 <div id="bottom">
 
 
-    <span><center><a href='index.php' alt='Home'><img src='includes/homebotton.png' > </a></center>
+    <span><center><a href='index.php' alt='Home'><img src='images/homebotton.png' > </a></center>
 </span>
 </div>
 <?php require_once("includes/foot.php");
