@@ -21,7 +21,7 @@ $conn = getDB(); ?>
     </span>
 
     <span class=' esquerda'><?php require 'includes/openbible.php' ?></span>
-    <span class='direita'>    <a href='index.php' alt='Home'><img src='images/homebotton.png' > </a>
+    <span class='direita'>    <a href='index.php' alt='Home'><img src='images/homebotton.png' alt='home'> </a>
 </span>
     
 </div>
@@ -54,7 +54,7 @@ $conn = getDB(); ?>
             <input type= "hidden" name="captl" value="<?= $captl;?>">
             <input type= "hidden" name="nombre" value="<?= $nombre;?>">
             <button type="submit">
-                <img src="images/next.png"></button>
+                <img src="images/next.png" aria-label="Próximo"></button>
 
         </form>
     </span>
