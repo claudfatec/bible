@@ -1,6 +1,7 @@
 <?php require_once("includes/header.php");
 require_once("includes/conn.php");
-$conn = getDB()?>
+$conn = getDB();
+?>
 <!-- Título -->
 <div id="top">
   <span class="titulo">
